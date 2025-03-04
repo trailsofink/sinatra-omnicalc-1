@@ -22,7 +22,7 @@ end
 
 get('/square_root/results') do 
   @num = params.fetch('user_number').to_f
-  @result = Math.sqrt(@num)
+  @result = Math.sqrt(@num).to_f
   erb(:square_root_results)
 end
 
