@@ -11,8 +11,8 @@ get('/square/new') do
 end  
 
 get('/square/results') do
-  @num = params.fetch('number').to_i
-  @result = @num.to_f**2
+  @num = params.fetch('number').to_f
+  @result = @num**2
   erb(:square_results)
 end
 
@@ -21,8 +21,8 @@ get('/square_root/new') do
 end
 
 get('/square_root/results') do 
-  @num = params.fetch('user_number').to_i
-  @result = Math.sqrt(@num.to_f)
+  @num = params.fetch('user_number').to_f
+  @result = Math.sqrt(@num)
   erb(:square_root_results)
 end
 
