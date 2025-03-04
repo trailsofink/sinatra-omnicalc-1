@@ -6,7 +6,6 @@ get("/") do
 end
 
 get('/square/new') do
-  
   erb(:square)
 end  
 
@@ -22,7 +21,7 @@ end
 
 get('/square_root/results') do 
   @num = params.fetch('user_number').to_f
-  @result = Math.sqrt(@num).to_f
+  @result = Math.sqrt(@num)
   erb(:square_root_results)
 end
 
